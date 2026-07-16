@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Plan Des Copines — Boutique féminine premium</title>
+<meta name="description" content="Le Plan Des Copines — vêtements, chaussures, sacs, accessoires et beauté pour révéler la femme qui est en vous. Nouvelle collection disponible.">
+
+<!-- Préconnexions -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- Bootstrap 5 (grille, containers, utilitaires uniquement) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Styles du template -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+</head>
+<body data-page="accueil">
+
+<!-- ============================================================ -->
+<!-- SPRITE SVG (icônes réutilisables)                              -->
+<!-- ============================================================ -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h13v13H1z"/><path d="M14 8h4l4 4v4h-8V8z"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></symbol>
+  <symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="icon-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5l2.9 6.4 6.8.7-5.1 4.7 1.5 6.9L12 17.8l-6.1 3.4 1.5-6.9-5.1-4.7 6.8-.7L12 2.5z"/></symbol>
+  <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9.6 5.4C6 6.7 3.6 9.8 3.6 13.6c0 3 2 5.2 4.6 5.2 2.2 0 3.8-1.7 3.8-3.8 0-2-1.4-3.5-3.3-3.5-.4 0-.7 0-1 .1.3-1.9 1.9-3.7 4.3-4.6L9.6 5.4zm10 0c-3.6 1.3-6 4.4-6 8.2 0 3 2 5.2 4.6 5.2 2.2 0 3.8-1.7 3.8-3.8 0-2-1.4-3.5-3.3-3.5-.4 0-.7 0-1 .1.3-1.9 1.9-3.7 4.3-4.6l-2.4-1.6z"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="icon-rotate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="icon-flower" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2c1.7 1.6 1.7 4 0 5.6C10.3 6 10.3 3.6 12 2zM12 22c-1.7-1.6-1.7-4 0-5.6 1.7 1.6 1.7 4 0 5.6zM2 12c1.6-1.7 4-1.7 5.6 0C6 13.7 3.6 13.7 2 12zM22 12c-1.6 1.7-4 1.7-5.6 0 1.6-1.7 4-1.7 5.6 0z"/><circle cx="12" cy="12" r="2.4"/></symbol>
+  <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8h2V4h-2a4 4 0 0 0-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></symbol>
+  <symbol id="icon-tiktok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.2a3.3 3.3 0 1 1-3.3-3.3c.3 0 .6 0 .9.1V8a6.3 6.3 0 1 0 6.3 6.3V9.6A6.6 6.6 0 0 0 21 11V8a4 4 0 0 1-4-4h-3z"/></symbol>
+  <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z"/><path d="M8.5 9.5c0 3.5 2.5 6 6 6"/></symbol>
+</svg>
+
+<!-- ============================================================ -->
+<!-- TOPBAR                                                         -->
+<!-- ============================================================ -->
+<div class="topbar">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="topbar-item">
+      <svg width="16" height="16" class="icon"><use href="#icon-truck"></use></svg>
+      <span>Livraison offerte dès 30 000 FCFA d'achat</span>
+    </div>
+    <a href="tel:+22507000000" class="topbar-item contact-line">
+      <svg width="14" height="14" class="icon"><use href="#icon-phone"></use></svg>
+      <span class="long">Service client :</span> +225 07 00 00 00 00
+    </a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- NAVBAR                                                         -->
+<!-- ============================================================ -->
+<header class="site-header">
+  <div class="navbar-brand-wrap">
+    <div class="container-xl px-3 px-lg-4">
+      <div class="navbar-main">
+
+        <a href="index.html" class="logo">
+          <svg width="26" height="26" class="icon"><use href="#icon-flower"></use></svg>
+          Le Plan Des <span>Copines</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+          <a href="index.html" data-nav-link="accueil">Accueil</a>
+          <a href="#produits" data-nav-link="produits">Produits</a>
+          <a href="#nouveautes" data-nav-link="nouveautes">Nouveautés</a>
+          <a href="#a-propos" data-nav-link="a-propos">À propos</a>
+          <a href="#contact" data-nav-link="contact">Contacts</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="position-relative">
+            <button class="icon-btn" type="button" data-search-toggle aria-expanded="false" aria-controls="search-flyout" aria-label="Ouvrir la recherche">
+              <svg width="19" height="19" class="icon"><use href="#icon-search"></use></svg>
+            </button>
+            <div class="search-flyout" id="search-flyout" data-search-flyout>
+              <form role="search" onsubmit="return false;">
+                <label for="search-input" class="visually-hidden">Rechercher un produit</label>
+                <input type="search" id="search-input" class="form-control" placeholder="Rechercher une robe, un sac…">
+              </form>
+            </div>
+          </div>
+
+          <a href="#" class="icon-btn hide-mobile" aria-label="Mon compte">
+            <svg width="19" height="19" class="icon"><use href="#icon-user"></use></svg>
+          </a>
+
+          <a href="#" class="icon-btn hide-mobile" aria-label="Mes favoris (0 article)">
+            <svg width="19" height="19" class="icon"><use href="#icon-heart"></use></svg>
+            <span class="badge-count" data-fav-count>0</span>
+          </a>
+
+          <a href="#" class="icon-btn" aria-label="Mon panier (0 article)">
+            <svg width="19" height="19" class="icon"><use href="#icon-bag"></use></svg>
+            <span class="badge-count" data-cart-count>0</span>
+          </a>
+
+          <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Ouvrir le menu">
+            <svg width="22" height="22" class="icon"><use href="#icon-menu"></use></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile (offcanvas Bootstrap) -->
+<div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <span class="logo" id="mobileMenuLabel">
+      <svg width="22" height="22" class="icon"><use href="#icon-flower"></use></svg>
+      Le Plan Des <span>Copines</span>
+    </span>
+    <button type="button" class="icon-btn" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+      <svg width="18" height="18" class="icon"><use href="#icon-close"></use></svg>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="index.html" data-nav-link="accueil">Accueil</a>
+    <a href="#produits" data-nav-link="produits">Produits</a>
+    <a href="#nouveautes" data-nav-link="nouveautes">Nouveautés</a>
+    <a href="#a-propos" data-nav-link="a-propos">À propos</a>
+    <a href="#contact" data-nav-link="contact">Contacts</a>
+    <a href="#">Mon compte</a>
+    <a href="#">Mes favoris</a>
+  </div>
+</div>
+
+<main>
+<!-- ============================================================ -->
+<!-- HERO                                                           -->
+<!-- ============================================================ -->
+<section class="hero" aria-label="Mise en avant de la nouvelle collection">
+  <div class="hero-shape hero-shape--1" aria-hidden="true"></div>
+  <div class="hero-shape hero-shape--2" aria-hidden="true"></div>
+
+  <div class="container-xl px-3 px-lg-4">
+    <div class="hero-slider" data-hero-slider>
+
+      <!-- Slide 1 -->
+      <article class="hero-slide is-active">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow">Nouvelle collection</p>
+            <h1 class="hero-title">Affirmez votre style,<em>Rayonnez votre féminité.</em></h1>
+            <p class="hero-subtitle">Des pièces sélectionnées avec soin pour des femmes uniques comme vous.</p>
+            <div class="hero-actions">
+              <a href="#produits" class="btn-primary-brand">
+                Découvrir la collection
+                <svg width="16" height="16" class="icon"><use href="#icon-chevron-right"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="https://placehold.co/900x1035/f6dee3/9a4f63?text=Sac+%26+accessoires&font=playfair-display" alt="Sac à main rose et accessoires de la nouvelle collection" width="900" height="1035" loading="eager">
+            <div class="hero-badge"><strong>-30%</strong><span>Sur une sélection</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="hero-slide">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow">Édition limitée</p>
+            <h1 class="hero-title">L'élégance,<em>en toute simplicité.</em></h1>
+            <p class="hero-subtitle">Des matières douces et des coupes intemporelles pensées pour vous accompagner toute l'année.</p>
+            <div class="hero-actions">
+              <a href="#produits" class="btn-primary-brand">
+                Voir la sélection
+                <svg width="16" height="16" class="icon"><use href="#icon-chevron-right"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="https://placehold.co/900x1035/f2c3ce/9a4f63?text=Robe+fluide&font=playfair-display" alt="Robe fluide rose de la collection été" width="900" height="1035">
+            <div class="hero-badge"><strong>Neuf</strong><span>Pièces exclusives</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="hero-slide">
+        <div class="hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow">Tendance du moment</p>
+            <h1 class="hero-title">Chaque pas,<em>une signature.</em></h1>
+            <p class="hero-subtitle">Talons fins et sneakers chics : trouvez la paire qui vous ressemble.</p>
+            <div class="hero-actions">
+              <a href="#produits" class="btn-primary-brand">
+                Explorer les chaussures
+                <svg width="16" height="16" class="icon"><use href="#icon-chevron-right"></use></svg>
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="https://placehold.co/900x1035/fdf9f6/9a4f63?text=Escarpins+%26+sneakers&font=playfair-display" alt="Escarpins roses et sneakers de la nouvelle collection" width="900" height="1035">
+            <div class="hero-badge"><strong>-20%</strong><span>Chaussures</span></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="hero-controls">
+      <button class="hero-arrow" type="button" data-hero-prev aria-label="Diapositive précédente">
+        <svg width="15" height="15" class="icon"><use href="#icon-chevron-left"></use></svg>
+      </button>
+      <div class="hero-dots" data-hero-dots></div>
+      <button class="hero-arrow" type="button" data-hero-next aria-label="Diapositive suivante">
+        <svg width="15" height="15" class="icon"><use href="#icon-chevron-right"></use></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AVANTAGES (version desktop, sous le hero)                     -->
+<!-- ============================================================ -->
+<section class="advantages advantages-desktop" aria-label="Nos engagements">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="advantages-grid stagger">
+      <div class="advantage-card" data-animate style="--i:0">
+        <div class="advantage-icon"><svg width="22" height="22" class="icon"><use href="#icon-shield"></use></svg></div>
+        <div>
+          <h3>Paiement sécurisé</h3>
+          <p>Transactions 100% sécurisées</p>
+        </div>
+      </div>
+      <div class="advantage-card" data-animate style="--i:1">
+        <div class="advantage-icon"><svg width="22" height="22" class="icon"><use href="#icon-truck"></use></svg></div>
+        <div>
+          <h3>Livraison rapide</h3>
+          <p>Partout en Côte d'Ivoire en 1 à 3 jours</p>
+        </div>
+      </div>
+      <div class="advantage-card" data-animate style="--i:2">
+        <div class="advantage-icon"><svg width="22" height="22" class="icon"><use href="#icon-rotate"></use></svg></div>
+        <div>
+          <h3>Retour facile</h3>
+          <p>7 jours pour changer d'avis</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CATÉGORIES                                                     -->
+<!-- ============================================================ -->
+<section class="categories" id="categories">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="section-heading" data-animate>
+      <div>
+        <p class="eyebrow">Explorer</p>
+        <h2>Nos catégories</h2>
+      </div>
+      <a href="#produits" class="link-arrow">
+        <span class="long">Voir tout</span>
+        <svg width="15" height="15" class="icon"><use href="#icon-chevron-right"></use></svg>
+      </a>
+    </div>
+
+    <div class="categories-grid stagger">
+      <div class="category-card" data-animate style="--i:0">
+        <div class="category-media"><img src="https://placehold.co/240x240/f2c3ce/7a3c4d?text=Robe" alt="Vêtements femme" loading="lazy"></div>
+        <h3>Vêtements</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+      <div class="category-card" data-animate style="--i:1">
+        <div class="category-media"><img src="https://placehold.co/240x240/f6dee3/7a3c4d?text=Escarpin" alt="Chaussures femme" loading="lazy"></div>
+        <h3>Chaussures</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+      <div class="category-card" data-animate style="--i:2">
+        <div class="category-media"><img src="https://placehold.co/240x240/f2c3ce/7a3c4d?text=Sac" alt="Sacs à main" loading="lazy"></div>
+        <h3>Sacs</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+      <div class="category-card" data-animate style="--i:3">
+        <div class="category-media"><img src="https://placehold.co/240x240/f6dee3/7a3c4d?text=Lunettes" alt="Accessoires" loading="lazy"></div>
+        <h3>Accessoires</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+      <div class="category-card" data-animate style="--i:4">
+        <div class="category-media"><img src="https://placehold.co/240x240/f2c3ce/7a3c4d?text=Parfum" alt="Beauté" loading="lazy"></div>
+        <h3>Beauté</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+      <div class="category-card" data-animate style="--i:5">
+        <div class="category-media is-dark"><span>New</span></div>
+        <h3>Nouveautés</h3>
+        <a href="#produits" class="link-arrow">Voir tout</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PRODUITS POPULAIRES                                            -->
+<!-- ============================================================ -->
+<section class="products" id="produits">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="section-heading" data-animate>
+      <div>
+        <p class="eyebrow">Sélection</p>
+        <h2>Nos produits populaires</h2>
+      </div>
+      <a href="#" class="link-arrow">
+        <span class="long">Voir tout</span>
+        <svg width="15" height="15" class="icon"><use href="#icon-chevron-right"></use></svg>
+      </a>
+    </div>
+
+    <div class="products-track-wrap" data-animate="zoom">
+      <button class="products-nav-btn products-nav-btn--prev" type="button" data-products-prev aria-label="Produits précédents">
+        <svg width="16" height="16" class="icon"><use href="#icon-chevron-left"></use></svg>
+      </button>
+
+      <div class="products-track" data-products-track>
+
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-badge">Coup de cœur</span>
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Robe fluide à volants aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/f2c3ce/7a3c4d?text=Robe+fluide" alt="Robe fluide à volants coloris rose" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Robe fluide à volants</a></h3>
+            <div class="product-rating">
+              <span class="stars">
+                <svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg>
+              </span>
+              <span>(18)</span>
+            </div>
+            <div class="product-price"><span class="current">29 900 FCFA</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Sac à main Élégance aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/f6dee3/7a3c4d?text=Sac+%C3%89l%C3%A9gance" alt="Sac à main rose modèle Élégance" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Sac à main Élégance</a></h3>
+            <div class="product-rating">
+              <span class="stars"><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg></span>
+              <span>(26)</span>
+            </div>
+            <div class="product-price"><span class="current">19 900 FCFA</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-badge">-15%</span>
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Sandales à talons fins aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/f2c3ce/7a3c4d?text=Sandales" alt="Sandales roses à talons fins" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Sandales à talons fins</a></h3>
+            <div class="product-rating">
+              <span class="stars"><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg></span>
+              <span>(14)</span>
+            </div>
+            <div class="product-price">
+              <span class="current">17 900 FCFA</span>
+              <span class="old">21 000 FCFA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Parfum La Douceur aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/fdf9f6/7a3c4d?text=Parfum" alt="Flacon du parfum La Douceur" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Parfum La Douceur</a></h3>
+            <div class="product-rating">
+              <span class="stars"><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg></span>
+              <span>(37)</span>
+            </div>
+            <div class="product-price"><span class="current">12 900 FCFA</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <span class="product-badge">Nouveau</span>
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Lunettes de soleil Chic aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/241d1c/f2c3ce?text=Lunettes" alt="Lunettes de soleil chic monture fine" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Lunettes de soleil Chic</a></h3>
+            <div class="product-rating">
+              <span class="stars"><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg></span>
+              <span>(21)</span>
+            </div>
+            <div class="product-price"><span class="current">8 900 FCFA</span></div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <button class="product-fav" type="button" data-fav-toggle aria-pressed="false" aria-label="Ajouter Collier doré fin aux favoris">
+              <svg width="16" height="16" class="icon"><use href="#icon-heart"></use></svg>
+            </button>
+            <img src="https://placehold.co/480x504/e4cd9c/6b4c1f?text=Collier" alt="Collier doré fin" loading="lazy">
+            <button class="product-quickadd" type="button" data-add-to-cart>
+              <svg width="15" height="15" class="icon"><use href="#icon-bag"></use></svg>
+              Ajout rapide
+            </button>
+          </div>
+          <div class="product-body">
+            <h3><a href="#">Collier doré fin</a></h3>
+            <div class="product-rating">
+              <span class="stars"><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg><svg width="12" height="12"><use href="#icon-star"></use></svg></span>
+              <span>(9)</span>
+            </div>
+            <div class="product-price"><span class="current">6 900 FCFA</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="products-nav-btn products-nav-btn--next" type="button" data-products-next aria-label="Produits suivants">
+        <svg width="16" height="16" class="icon"><use href="#icon-chevron-right"></use></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AVANTAGES (version mobile compacte, sous les produits)         -->
+<!-- ============================================================ -->
+<section class="advantages advantages-mobile" aria-label="Nos engagements">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="advantages-grid advantages-grid--mobile">
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg width="18" height="18" class="icon"><use href="#icon-shield"></use></svg></div>
+        <div><h3>Paiement sécurisé</h3><p>Transactions 100% sécurisées</p></div>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg width="18" height="18" class="icon"><use href="#icon-truck"></use></svg></div>
+        <div><h3>Livraison rapide</h3><p>1 à 3 jours</p></div>
+      </div>
+      <div class="advantage-card">
+        <div class="advantage-icon"><svg width="18" height="18" class="icon"><use href="#icon-rotate"></use></svg></div>
+        <div><h3>Retours faciles</h3><p>Sous 7 jours</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BANNIÈRE PROMOTIONNELLE                                        -->
+<!-- ============================================================ -->
+<section class="promo-banner-wrap px-3 px-lg-4" data-animate>
+  <svg class="promo-leaf" width="90" height="140" viewBox="0 0 90 140" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" style="color:#c6a15b">
+    <path d="M45 5c20 25 20 105 0 130M45 5C25 30 25 110 45 135M20 30c10 4 20 12 25 22M70 30c-10 4-20 12-25 22M15 70c12 0 24 5 30 12M75 70c-12 0-24 5-30 12M20 105c10-2 20-8 25-16M70 105c-10-2-20-8-25-16"/>
+  </svg>
+  <div class="promo-banner">
+    <div class="promo-grid">
+      <div class="promo-item">
+        <div class="promo-icon"><svg width="20" height="20" class="icon"><use href="#icon-heart"></use></svg></div>
+        <div>
+          <h4>Offres exclusives</h4>
+          <p>Des réductions toute l'année pour vous gâter</p>
+        </div>
+      </div>
+      <div class="promo-item">
+        <div class="promo-icon"><svg width="20" height="20" class="icon"><use href="#icon-mail"></use></svg></div>
+        <div>
+          <h4>Inscrivez-vous & économisez</h4>
+          <p>Recevez nos offres exclusives et nouveautés en avant-première</p>
+        </div>
+      </div>
+      <form class="promo-form" data-newsletter-form onsubmit="return false;">
+        <label for="promo-email" class="visually-hidden">Adresse e-mail</label>
+        <input type="email" id="promo-email" placeholder="Votre adresse e-mail" required>
+        <button type="submit" class="btn-rose">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TÉMOIGNAGES                                                    -->
+<!-- ============================================================ -->
+<section class="testimonials" id="a-propos">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="section-heading justify-content-center text-center" data-animate>
+      <div class="w-100">
+        <p class="eyebrow justify-content-center">Confiance</p>
+        <h2>Elles nous font confiance</h2>
+        <div class="underline mx-auto"></div>
+      </div>
+    </div>
+
+    <div class="testimonial-track-wrap" data-testimonial-slider>
+      <div class="testimonial-track" data-testimonial-track>
+
+        <div class="testimonial-slide-group">
+          <div class="testimonial-card" data-animate style="--i:0">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">J'adore la qualité des produits et le service client est vraiment au top !</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/f2c3ce/7a3c4d?text=A" alt="" loading="lazy">
+              <div><strong>Aïcha K.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-animate style="--i:1">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">Ma boutique préférée ! Livraison rapide et articles conformes aux photos.</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/f6dee3/7a3c4d?text=M" alt="" loading="lazy">
+              <div><strong>Mariam T.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-animate style="--i:2">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">Des pépites à chaque commande. Je recommande à 100% !</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/e4cd9c/6b4c1f?text=F" alt="" loading="lazy">
+              <div><strong>Fatou D.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide-group">
+          <div class="testimonial-card" data-animate style="--i:0">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">Un vrai coup de cœur pour le sac Élégance, la qualité est bluffante.</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/f2c3ce/7a3c4d?text=S" alt="" loading="lazy">
+              <div><strong>Sarah N.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-animate style="--i:1">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">Le service après-vente a été très réactif pour un échange de taille.</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/f6dee3/7a3c4d?text=R" alt="" loading="lazy">
+              <div><strong>Ramata S.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-animate style="--i:2">
+            <svg width="26" height="26" class="testimonial-quote"><use href="#icon-quote"></use></svg>
+            <p class="comment">Emballage soigné, parfum délicat : une expérience premium du début à la fin.</p>
+            <div class="testimonial-stars">
+              <svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg><svg width="13" height="13"><use href="#icon-star"></use></svg>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://placehold.co/92x92/e4cd9c/6b4c1f?text=N" alt="" loading="lazy">
+              <div><strong>Nadège A.</strong><span>Cliente vérifiée</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonial-dots" data-testimonial-dots></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- NEWSLETTER                                                     -->
+<!-- ============================================================ -->
+<section class="newsletter" id="nouveautes">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="newsletter-inner" data-animate>
+      <p class="eyebrow justify-content-center">Restons connectées</p>
+      <h2>Ne manquez aucune nouveauté</h2>
+      <p>Inscrivez-vous à notre newsletter et recevez en avant-première nos nouvelles collections et offres exclusives.</p>
+      <form class="newsletter-form" data-newsletter-form onsubmit="return false;">
+        <label for="newsletter-email" class="visually-hidden">Adresse e-mail</label>
+        <input type="email" id="newsletter-email" placeholder="Votre adresse e-mail" required>
+        <button type="submit" class="btn-rose">S'inscrire</button>
+      </form>
+      <p class="newsletter-msg" data-newsletter-msg aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                         -->
+<!-- ============================================================ -->
+<footer class="site-footer" id="contact">
+  <div class="container-xl px-3 px-lg-4">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg width="24" height="24" class="icon"><use href="#icon-flower"></use></svg>
+          Le Plan Des <span>Copines</span>
+        </a>
+        <p>Votre destination mode & beauté pour révéler la femme qui est en vous.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" class="icon"><use href="#icon-facebook"></use></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" class="icon"><use href="#icon-instagram"></use></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="16" height="16" class="icon"><use href="#icon-tiktok"></use></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" class="icon"><use href="#icon-whatsapp"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="#">Vêtements</a></li>
+          <li><a href="#">Chaussures</a></li>
+          <li><a href="#">Sacs & Accessoires</a></li>
+          <li><a href="#">Beauté</a></li>
+          <li><a href="#">Nouveautés</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Infos utiles</h4>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Livraison & Retours</a></li>
+          <li><a href="#">Conditions générales</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-account">
+        <h4>Mon compte</h4>
+        <ul>
+          <li><a href="#">Mon compte</a></li>
+          <li><a href="#">Mes commandes</a></li>
+          <li><a href="#">Mes favoris</a></li>
+          <li><a href="#">Mes adresses</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg width="15" height="15" class="icon"><use href="#icon-phone"></use></svg>
+            <a href="tel:+22507000000">+225 07 00 00 00 00</a>
+          </li>
+          <li>
+            <svg width="15" height="15" class="icon"><use href="#icon-mail"></use></svg>
+            <a href="mailto:contact@leplandescopines.ci">contact@leplandescopines.ci</a>
+          </li>
+          <li>
+            <svg width="15" height="15" class="icon"><use href="#icon-pin"></use></svg>
+            <span>Abidjan, Côte d'Ivoire</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Le Plan Des Copines. Tous droits réservés.</p>
+      <div class="payment-icons">
+        <span>Visa</span><span>Mastercard</span><span>PayPal</span><span>Orange Money</span><span>MTN MoMo</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- BOTTOM NAVIGATION (mobile uniquement)                          -->
+<!-- ============================================================ -->
+<nav class="bottom-nav" aria-label="Navigation mobile">
+  <ul>
+    <li><a href="index.html" data-nav-link="accueil"><svg width="20" height="20" class="icon"><use href="#icon-home"></use></svg>Accueil</a></li>
+    <li><a href="#categories" data-nav-link="categories"><svg width="20" height="20" class="icon"><use href="#icon-grid"></use></svg>Catégories</a></li>
+    <li><a href="#" data-nav-link="compte"><svg width="20" height="20" class="icon"><use href="#icon-user"></use></svg>Compte</a></li>
+    <li><a href="#" data-nav-link="favoris" style="position:relative"><svg width="20" height="20" class="icon"><use href="#icon-heart"></use></svg>Favoris<span class="badge-count" data-fav-count>0</span></a></li>
+    <li><a href="#" data-nav-link="panier" style="position:relative"><svg width="20" height="20" class="icon"><use href="#icon-bag"></use></svg>Panier<span class="badge-count" data-cart-count>0</span></a></li>
+  </ul>
+</nav>
+
+<!-- Bootstrap JS (offcanvas uniquement) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
