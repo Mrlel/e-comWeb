@@ -18,14 +18,5 @@ class UtilisateurSeeder extends Seeder
             'telephone' => '0720796688',
             'role' => 'admin'
         ]);
-
-        User::create([
-            'nom' => 'Client',
-            'prenom' => 'Test',
-            'email' => 'client@test.com',
-            'password' => Hash::make('password'), // ⚠️ idem
-            'telephone' => '0700000001',
-            'role' => 'client'
-        ]);
     }
 }
