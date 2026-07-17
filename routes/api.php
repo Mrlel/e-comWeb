@@ -2,10 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WebhookGeniusPayController;
 
-Route::post('/webhook/geniuspay', [WebhookGeniusPayController::class, 'handle'])
-    ->name('webhook.geniuspay');
 /*
 |--------------------------------------------------------------------------
 | API Routes

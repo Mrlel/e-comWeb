@@ -10,18 +10,9 @@ use App\Http\Controllers\Admin\ProduitController;
 use App\Http\Controllers\Admin\CategorieController;
 use App\Http\Controllers\Admin\CommandeController as AdminCommandeController;
 use App\Http\Controllers\Admin\UtilisateurController;
-use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\PageController;
 
 Route::middleware(['auth'])->group(function () {
-    // Paiement
-    Route::prefix('paiement')->name('paiement.')->group(function () {
-        Route::get('/commande/{commandeId}', [PaiementController::class, 'show'])->name('show');
-        Route::post('/initier/{commandeId}', [PaiementController::class, 'initier'])->name('initier');
-        Route::get('/retour', [PaiementController::class, 'retour'])->name('retour');
-        Route::get('/echec/{commandeId}', [PaiementController::class, 'echec'])->name('echec');
-    });
-
     // Espace client
     Route::get('/mes-commandes', [CommandeController::class, 'mesCommandes'])->name('commande.mes-commandes');
     Route::get('/mes-commandes/{id}', [CommandeController::class, 'detail'])->name('commande.detail');
@@ -41,6 +32,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // ─── BOUTIQUE ────────────────────────────────────────────────────────────────
 Route::get('/', [BoutiqueController::class, 'index'])->name('boutique');
+Route::get('/produits', [BoutiqueController::class, 'produits'])->name('boutique.produits');
 Route::get('/produit/{id}', [BoutiqueController::class, 'show'])->name('produit.show');
 Route::get('/categorie/{id}', [BoutiqueController::class, 'categorie'])->name('boutique.categorie');
 
@@ -53,6 +45,7 @@ Route::delete('/panier/vider', [PanierController::class, 'vider'])->name('panier
 // ─── COMMANDE ────────────────────────────────────────────────────────────────
 Route::get('/commande/checkout', [CommandeController::class, 'checkout'])->name('commande.checkout');
 Route::post('/commande/passer', [CommandeController::class, 'passer'])->name('commande.passer');
+Route::get('/commande/confirmation/{id}', [CommandeController::class, 'confirmation'])->name('commande.confirmation');
 
 // ─── PAGES ───────────────────────────────────────────────────────────────────
 Route::get('/a-propos', [PageController::class, 'about'])->name('a-propos');

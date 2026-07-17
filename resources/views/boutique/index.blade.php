@@ -118,7 +118,7 @@
         <p class="eyebrow">Explorer</p>
         <h2>Nos catégories</h2>
       </div>
-      <a href="#produits" class="link-arrow">
+      <a href="{{ route('boutique.produits') }}" class="link-arrow">
         <span class="long">Voir tout</span>
         <svg width="15" height="15" class="icon"><use href="#icon-chevron-right"></use></svg>
       </a>
@@ -130,22 +130,26 @@
       <div class="categories-grid stagger">
         @foreach($categories as $categorie)
           <div class="category-card" data-animate style="--i:{{ $loop->index }}">
-            <div class="category-media {{ !$categorie->image ? 'is-empty' : '' }}">
-              @if($categorie->image)
-                <img src="{{ asset('storage/'.$categorie->image) }}" alt="{{ $categorie->nom }}" loading="lazy">
-              @else
-                <span>{{ mb_substr($categorie->nom, 0, 1) }}</span>
-              @endif
-            </div>
-            <h3>{{ $categorie->nom }}</h3>
+            <a href="{{ route('boutique.categorie', $categorie->id) }}" aria-label="Voir les produits {{ $categorie->nom }}">
+              <div class="category-media {{ !$categorie->image ? 'is-empty' : '' }}">
+                @if($categorie->image)
+                  <img src="{{ asset('storage/'.$categorie->image) }}" alt="{{ $categorie->nom }}" loading="lazy">
+                @else
+                  <span>{{ mb_substr($categorie->nom, 0, 1) }}</span>
+                @endif
+              </div>
+              <h3>{{ $categorie->nom }}</h3>
+            </a>
             <a href="{{ route('boutique.categorie', $categorie->id) }}" class="link-arrow">Voir tout</a>
           </div>
         @endforeach
 
         <div class="category-card" data-animate style="--i:{{ $categories->count() }}">
-          <div class="category-media is-dark"><span>New</span></div>
-          <h3>Nouveautés</h3>
-          <a href="#produits" class="link-arrow">Voir tout</a>
+          <a href="{{ route('boutique.produits') }}" aria-label="Voir les nouveautés">
+            <div class="category-media is-dark"><span>New</span></div>
+            <h3>Nouveautés</h3>
+          </a>
+          <a href="{{ route('boutique.produits') }}" class="link-arrow">Voir tout</a>
         </div>
       </div>
     @endif
@@ -165,7 +169,7 @@
         <p class="eyebrow">Offre limitée</p>
         <h2>Jusqu'à -30% sur la nouvelle collection</h2>
         <p>Profitez de réductions exclusives sur une sélection de pièces, pour un temps limité seulement.</p>
-        <a href="{{ route('boutique') }}#produits" class="btn-rose">Découvrir les promotions</a>
+        <a href="{{ route('boutique.produits') }}" class="btn-rose">Découvrir les promotions</a>
       </div>
     </div>
   </div>
@@ -181,7 +185,7 @@
         <p class="eyebrow">Sélection</p>
         <h2>Nos produits populaires</h2>
       </div>
-      <a href="{{ route('boutique') }}#produits" class="link-arrow">
+      <a href="{{ route('boutique.produits') }}" class="link-arrow">
         <span class="long">Voir tout</span>
         <svg width="15" height="15" class="icon"><use href="#icon-chevron-right"></use></svg>
       </a>
@@ -340,20 +344,23 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- NEWSLETTER                                                     -->
+<!-- BANDEAU IMAGE + TEXTE                                          -->
 <!-- ============================================================ -->
-<section class="newsletter" id="nouveautes">
+<section class="brand-banner" id="nouveautes">
   <div class="container-xl px-3 px-lg-4">
-    <div class="newsletter-inner" data-animate>
-      <p class="eyebrow justify-content-center">Restons connectées</p>
-      <h2>Ne manquez aucune nouveauté</h2>
-      <p>Inscrivez-vous à notre newsletter et recevez en avant-première nos nouvelles collections et offres exclusives.</p>
-      <form class="newsletter-form" data-newsletter-form onsubmit="return false;">
-        <label for="newsletter-email" class="visually-hidden">Adresse e-mail</label>
-        <input type="email" id="newsletter-email" placeholder="Votre adresse e-mail" required>
-        <button type="submit" class="btn-rose">S'inscrire</button>
-      </form>
-      <p class="newsletter-msg" data-newsletter-msg aria-live="polite"></p>
+    <div class="brand-banner-inner" data-animate>
+      <div class="brand-banner-media">
+        <img src="{{ asset('angela.jpg') }}" alt="Nouvelle collection Le Plan Des Copines" loading="lazy">
+      </div>
+      <div class="brand-banner-content">
+        <p class="eyebrow">L'art du style</p>
+        <h2>Un style qui vous ressemble</h2>
+        <p>Des pièces pensées pour révéler votre féminité au quotidien, entre élégance intemporelle et tendances du moment.</p>
+        <a href="{{ route('boutique.produits') }}" class="btn-rose">
+          Découvrir la collection
+          <svg width="16" height="16" class="icon"><use href="#icon-chevron-right"></use></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>

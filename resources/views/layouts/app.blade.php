@@ -75,7 +75,7 @@
 
         <nav class="nav-links" aria-label="Navigation principale">
           <a href="{{ route('boutique') }}" data-nav-link="accueil">Accueil</a>
-          <a href="{{ route('boutique') }}#produits" data-nav-link="produits">Produits</a>
+          <a href="{{ route('boutique.produits') }}" data-nav-link="produits">Produits</a>
           <a href="{{ route('boutique') }}#categories" data-nav-link="nouveautes">Nouveautés</a>
           <a href="{{ route('a-propos') }}" data-nav-link="a-propos">À propos</a>
           <a href="{{ route('contact') }}" data-nav-link="contact">Contacts</a>
@@ -122,7 +122,7 @@
   </div>
   <div class="offcanvas-body">
     <a href="{{ route('boutique') }}" data-nav-link="accueil">Accueil</a>
-    <a href="{{ route('boutique') }}#produits" data-nav-link="produits">Produits</a>
+    <a href="{{ route('boutique.produits') }}" data-nav-link="produits">Produits</a>
     <a href="{{ route('boutique') }}#categories" data-nav-link="nouveautes">Nouveautés</a>
     <a href="{{ route('a-propos') }}" data-nav-link="a-propos">À propos</a>
     <a href="{{ route('contact') }}" data-nav-link="contact">Contacts</a>
@@ -142,7 +142,7 @@
     </button>
   </div>
   <div class="offcanvas-body">
-    <form role="search" action="{{ route('boutique') }}" method="GET" class="search-panel-form">
+    <form role="search" action="{{ route('boutique.produits') }}" method="GET" class="search-panel-form">
       <label for="search-panel-input" class="visually-hidden">Rechercher un produit</label>
       <input type="search" name="q" id="search-panel-input" class="form-control" placeholder="Rechercher une robe, un sac…">
       <button type="submit" class="btn-rose">Rechercher</button>
@@ -194,7 +194,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <a href="{{ route('boutique') }}" class="logo">
-          <img src="{{ asset('logo-lpdc-trimmed.png') }}" alt="Le Plan Des Copines" class="logo-img">
+          <img src="{{ asset('lpdc-logo0.png') }}" alt="Le Plan Des Copines" class="logo-img">
         </a>
         <p>Votre destination mode &amp; beauté pour révéler la femme qui est en vous.</p>
         <div class="social-row">
@@ -211,7 +211,7 @@
           @foreach($categories ?? [] as $cat)
             <li><a href="{{ route('boutique.categorie', $cat->id) }}">{{ $cat->nom }}</a></li>
           @endforeach
-          <li><a href="{{ route('boutique') }}#produits">Promotions</a></li>
+          <li><a href="{{ route('boutique.produits') }}">Promotions</a></li>
         </ul>
       </div>
 

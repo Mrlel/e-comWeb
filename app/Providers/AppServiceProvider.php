@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Categorie;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer('layouts.app', function ($view) {
             $view->with('navCategories', Categorie::orderBy('nom')->get());
         });
+
+        Paginator::useBootstrap();
     }
 }

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Commande;
 use App\Models\LigneCommande;
-use App\Models\Paiement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class CommandeController extends Controller
@@ -61,10 +62,61 @@ class CommandeController extends Controller
             ]);
         }
 
-        // Stocker les infos client en session pour le paiement
+        $this->notifierAdmin($commande, $request, $panier);
+
+        session()->forget('panier');
         session()->put('client_info', $request->only('nom', 'prenom', 'email', 'telephone'));
 
-        return redirect()->route('paiement.show', $commande->id);
+        return redirect()->route('commande.confirmation', $commande->id)
+            ->with('success', 'Votre commande a bien été enregistrée.');
+    }
+
+    /**
+     * Avertit l'admin par e-mail : plus de paiement en ligne, la commande
+     * doit être traitée manuellement (contact client, livraison, encaissement).
+     */
+    protected function notifierAdmin(Commande $commande, Request $request, array $panier): void
+    {
+        $lignesTexte = collect($panier)
+            ->map(fn ($item) => "- {$item['nom']} x{$item['quantite']} : " . number_format($item['prix'] * $item['quantite'], 0, ',', ' ') . ' FCFA')
+            ->implode("\n");
+
+        $totalFormate = number_format($commande->montant_total, 0, ',', ' ') . ' FCFA';
+
+        $corps = <<<TEXT
+Nouvelle commande reçue : {$commande->reference_commande}
+
+Client : {$request->prenom} {$request->nom}
+Email : {$request->email}
+Téléphone : {$request->telephone}
+Adresse de livraison : {$request->adresse_livraison}
+
+Articles :
+{$lignesTexte}
+
+Total : {$totalFormate}
+
+Merci de contacter le/la client(e) pour confirmer le paiement et la livraison.
+TEXT;
+
+        try {
+            Mail::raw($corps, function ($mail) use ($commande) {
+                $mail->to(config('mail.from.address'))
+                    ->subject('Nouvelle commande — ' . $commande->reference_commande);
+            });
+        } catch (\Throwable $e) {
+            Log::error('Échec notification admin nouvelle commande', [
+                'commande_id' => $commande->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function confirmation($id)
+    {
+        $commande = Commande::with('ligneCommandes.produit')->findOrFail($id);
+
+        return view('commande.confirmation', compact('commande'));
     }
 
     public function mesCommandes()

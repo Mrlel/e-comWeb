@@ -258,39 +258,6 @@ import './bootstrap';
   }
 
   /* ----------------------------------------------------------------
-   * Module : Newsletter — validation JS simple
-   * ---------------------------------------------------------------- */
-  function initNewsletterForms() {
-    document.querySelectorAll('[data-newsletter-form]').forEach((form) => {
-      const input = form.querySelector('input[type="email"]');
-      const msg = form.querySelector('[data-newsletter-msg]');
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const value = input.value.trim();
-        const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-
-        input.classList.toggle('is-invalid', !isValid);
-
-        if (!isValid) {
-          if (msg) {
-            msg.textContent = 'Merci de renseigner une adresse e-mail valide.';
-            msg.className = 'newsletter-msg error';
-          }
-          input.focus();
-          return;
-        }
-
-        if (msg) {
-          msg.textContent = `Merci ! Vous recevrez nos prochaines offres à ${value}.`;
-          msg.className = 'newsletter-msg success';
-        }
-        form.reset();
-      });
-    });
-  }
-
-  /* ----------------------------------------------------------------
    * Module : Apparition au scroll (IntersectionObserver)
    * ---------------------------------------------------------------- */
   function initScrollReveal() {
@@ -336,7 +303,6 @@ import './bootstrap';
     initCartPanelRemove();
     initHeroSlider();
     initProductsScroller();
-    initNewsletterForms();
     initScrollReveal();
     initActiveNav();
   });

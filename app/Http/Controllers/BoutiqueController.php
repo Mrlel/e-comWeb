@@ -16,6 +16,20 @@ class BoutiqueController extends Controller
         return view('boutique.index', compact('produits', 'categories'));
     }
 
+    public function produits(Request $request)
+    {
+        $query = Produit::with(['categorie', 'avis']);
+
+        if ($request->filled('q')) {
+            $query->where('nom', 'like', '%' . $request->string('q') . '%');
+        }
+
+        $produits = $query->latest()->paginate(12)->withQueryString();
+        $categories = Categorie::withCount('produits')->get();
+
+        return view('boutique.produits', compact('produits', 'categories'));
+    }
+
     public function show($id)
     {
         $produit = Produit::with(['categorie', 'avis.user'])->findOrFail($id);
